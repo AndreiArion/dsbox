@@ -1,0 +1,799 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n## Zeppelin tutorial in Scala\nThis is the same tutorial, but using `scala` (Shift-Enter to Run)",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241759021_179146957",
+      "id": "20160108-082919_17247092",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch2\u003eZeppelin tutorial in Scala\u003c/h2\u003e\n\u003cp\u003eThis is the same tutorial, but using \u003ccode\u003escala\u003c/code\u003e (Shift-Enter to Run)\u003c/p\u003e\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val testS3\u003d sc.textFile(\"s3n://telecom-bigdata-2016/projet/pagecounts-20110101-000000.gz\")\ntestS3.take(1)",
+      "dateUpdated": "Jan 8, 2016 8:35:29 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241767527_1004833420",
+      "id": "20160108-082927_32357339",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "testS3: org.apache.spark.rdd.RDD[String] \u003d MapPartitionsRDD[88] at textFile at \u003cconsole\u003e:75\njava.io.IOException: No FileSystem for scheme: s3n\n\tat org.apache.hadoop.fs.FileSystem.getFileSystemClass(FileSystem.java:2584)\n\tat org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:2591)\n\tat org.apache.hadoop.fs.FileSystem.access$200(FileSystem.java:91)\n\tat org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:2630)\n\tat org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:2612)\n\tat org.apache.hadoop.fs.FileSystem.get(FileSystem.java:370)\n\tat org.apache.hadoop.fs.Path.getFileSystem(Path.java:296)\n\tat org.apache.hadoop.mapred.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:256)\n\tat org.apache.hadoop.mapred.FileInputFormat.listStatus(FileInputFormat.java:228)\n\tat org.apache.hadoop.mapred.FileInputFormat.getSplits(FileInputFormat.java:313)\n\tat org.apache.spark.rdd.HadoopRDD.getPartitions(HadoopRDD.scala:207)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:239)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:237)\n\tat scala.Option.getOrElse(Option.scala:120)\n\tat org.apache.spark.rdd.RDD.partitions(RDD.scala:237)\n\tat org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:35)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:239)\n\tat org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:237)\n\tat scala.Option.getOrElse(Option.scala:120)\n\tat org.apache.spark.rdd.RDD.partitions(RDD.scala:237)\n\tat org.apache.spark.rdd.RDD$$anonfun$take$1.apply(RDD.scala:1281)\n\tat org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:147)\n\tat org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:108)\n\tat org.apache.spark.rdd.RDD.withScope(RDD.scala:310)\n\tat org.apache.spark.rdd.RDD.take(RDD.scala:1276)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:78)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:83)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:85)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:87)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:89)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:91)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:93)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:95)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:97)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:99)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:101)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:103)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:105)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:107)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:109)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:111)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:113)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:115)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:117)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:119)\n\tat $iwC$$iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:121)\n\tat $iwC$$iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:123)\n\tat $iwC$$iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:125)\n\tat $iwC$$iwC.\u003cinit\u003e(\u003cconsole\u003e:127)\n\tat $iwC.\u003cinit\u003e(\u003cconsole\u003e:129)\n\tat \u003cinit\u003e(\u003cconsole\u003e:131)\n\tat .\u003cinit\u003e(\u003cconsole\u003e:135)\n\tat .\u003cclinit\u003e(\u003cconsole\u003e)\n\tat .\u003cinit\u003e(\u003cconsole\u003e:7)\n\tat .\u003cclinit\u003e(\u003cconsole\u003e)\n\tat $print(\u003cconsole\u003e)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:606)\n\tat org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:1065)\n\tat org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1340)\n\tat org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:840)\n\tat org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:871)\n\tat org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:819)\n\tat org.apache.zeppelin.spark.SparkInterpreter.interpretInput(SparkInterpreter.java:708)\n\tat org.apache.zeppelin.spark.SparkInterpreter.interpret(SparkInterpreter.java:673)\n\tat org.apache.zeppelin.spark.SparkInterpreter.interpret(SparkInterpreter.java:666)\n\tat org.apache.zeppelin.interpreter.ClassloaderInterpreter.interpret(ClassloaderInterpreter.java:57)\n\tat org.apache.zeppelin.interpreter.LazyOpenInterpreter.interpret(LazyOpenInterpreter.java:93)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:300)\n\tat org.apache.zeppelin.scheduler.Job.run(Job.java:169)\n\tat org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:134)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:262)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:178)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:292)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)\n\tat java.lang.Thread.run(Thread.java:745)\n\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:27 AM",
+      "dateStarted": "Jan 8, 2016 8:35:29 AM",
+      "dateFinished": "Jan 8, 2016 8:35:29 AM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val dateFormat \u003d new java.text.SimpleDateFormat(\"yyyyMMdd-HHmmss\")\ndateFormat.parse(\"20090101-130000\")",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_28706469",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "dateFormat: java.text.SimpleDateFormat \u003d java.text.SimpleDateFormat@267f970d\nres200: java.util.Date \u003d Thu Jan 01 13:00:00 UTC 2009\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val firstRDD \u003d sc.textFile(\"/vagrant/tiny-20090101-130000.ssv\")",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_24002987",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "firstRDD: org.apache.spark.rdd.RDD[String] \u003d MapPartitionsRDD[5] at textFile at \u003cconsole\u003e:23\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "firstRDD.take(1)",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_26826445",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "res13: Array[String] \u003d Array(en Barack_Obama 997 123091092)\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "firstRDD.map(line \u003d\u003e (line+\" \"+\"20090101-130000\").split(\" \")).take(1)",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_1159066",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "res204: Array[Array[String]] \u003d Array(Array(en, Barack_Obama, 997, 123091092, 20090101-130000))\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val test \u003d firstRDD.map(line \u003d\u003e (line+\" \"+\"20090101-130000\").split(\" \"))\nval pageViews \u003d test.map(el\u003d\u003e(el(1),el(2),dateFormat.parse(el(4))))\npageViews.collect()",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_18854599",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "test: org.apache.spark.rdd.RDD[Array[String]] \u003d MapPartitionsRDD[53] at map at \u003cconsole\u003e:59\npageViews: org.apache.spark.rdd.RDD[(String, String, java.util.Date)] \u003d MapPartitionsRDD[54] at map at \u003cconsole\u003e:63\nres206: Array[(String, String, java.util.Date)] \u003d Array((Barack_Obama,997,Thu Jan 01 13:00:00 UTC 2009), (Barack_Obama%27s_first_100_days,8,Thu Jan 01 13:00:00 UTC 2009), (Barack_Obama,_Jr,1,Thu Jan 01 13:00:00 UTC 2009), (Barack_Obama,_Sr.,37,Thu Jan 01 13:00:00 UTC 2009), (Barack_Obama_%22HOPE%22_poster,4,Thu Jan 01 13:00:00 UTC 2009), (Barack_Obama_%22Hope%22_poster,5,Thu Jan 01 13:00:00 UTC 2009))\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "\n// The schema is encoded in a string\nval schemaString \u003d \"page views date\"\n\n// Import Row.\nimport org.apache.spark.sql.Row;\n\n// Import Spark SQL data types\nimport org.apache.spark.sql.types.{StructType,StructField,StringType,IntegerType,DateType};\n\n// Generate the schema based on the string of schema\nval schema \u003d\n  StructType(Array(StructField(\"page\", StringType, true),StructField(\"views\", IntegerType, true),StructField(\"date\", DateType, true)))\n\n// Convert records of the RDD (people) to Rows.\nval rowRDD \u003d pageViews.map(p \u003d\u003e Row(p._1, Integer.parseInt(p._2), new java.sql.Date(p._3.getTime())))\n\n// Apply the schema to the RDD.\nval pageViewsDataFrame \u003d sqlContext.createDataFrame(rowRDD, schema)\n\n// Register the DataFrames as a table.\npageViewsDataFrame.registerTempTable(\"pageViews\")\n\n// SQL statements can be run by using the sql methods provided by sqlContext.\nval results \u003d sqlContext.sql(\"SELECT * FROM pageViews ORDER BY views DESC\")\nresults.show()",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_1202600",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "schemaString: String \u003d page views date\nimport org.apache.spark.sql.Row\nimport org.apache.spark.sql.types.{StructType, StructField, StringType, IntegerType, DateType}\nschema: org.apache.spark.sql.types.StructType \u003d StructType(StructField(page,StringType,true), StructField(views,IntegerType,true), StructField(date,DateType,true))\nrowRDD: org.apache.spark.rdd.RDD[org.apache.spark.sql.Row] \u003d MapPartitionsRDD[71] at map at \u003cconsole\u003e:85\npageViewsDataFrame: org.apache.spark.sql.DataFrame \u003d [page: string, views: int, date: date]\nresults: org.apache.spark.sql.DataFrame \u003d [page: string, views: int, date: date]\n+--------------------+-----+----------+\n|                page|views|      date|\n+--------------------+-----+----------+\n|        Barack_Obama|  997|2009-01-01|\n|   Barack_Obama,_Sr.|   37|2009-01-01|\n|Barack_Obama%27s_...|    8|2009-01-01|\n|Barack_Obama_%22H...|    5|2009-01-01|\n|Barack_Obama_%22H...|    4|2009-01-01|\n|    Barack_Obama,_Jr|    1|2009-01-01|\n+--------------------+-----+----------+\n\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nSELECT * FROM pageViews \nWHERE ${date\u003d\"2009-01-01\"}\u003e\u003d\"2009-01-01\" \nORDER BY views  DESC",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "scatterChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "page",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "views",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "page",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "views",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {
+          "date": "\u00272009-01-02\u0027"
+        },
+        "forms": {
+          "date": {
+            "name": "date",
+            "defaultValue": "\"2009-01-01\"",
+            "hidden": false
+          }
+        }
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_12337235",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "page\tviews\tdate\nBarack_Obama\t997\t2009-01-01\nBarack_Obama,_Sr.\t37\t2009-01-01\nBarack_Obama%27s_first_100_days\t8\t2009-01-01\nBarack_Obama_%22Hope%22_poster\t5\t2009-01-01\nBarack_Obama_%22HOPE%22_poster\t4\t2009-01-01\nBarack_Obama,_Jr\t1\t2009-01-01\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%dep\nz.reset()\n\n// Add spark-csv package\nz.load(\"com.databricks:spark-csv_2.10:1.3.0\")",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "enabled": true,
+        "tableHide": false,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_19087857",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "res0: org.apache.zeppelin.spark.dep.Dependency \u003d org.apache.zeppelin.spark.dep.Dependency@1281d9d\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "// DO NOT import org.apache.spark.sql.SQLContext\n// USE zeppelin default sqlContext\nval bankScala \u003d sqlContext.read\n    .format(\"com.databricks.spark.csv\")\n    .option(\"header\", \"true\")\n    .option(\"delimiter\",\";\")\n    .option(\"inferSchema\", \"true\")\n    .load(\"/vagrant/zeppelin_notebooks/bank.csv\") ",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_29243878",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "bankScala: org.apache.spark.sql.DataFrame \u003d [age: int, job: string, marital: string, education: string, default: string, balance: int, housing: string, loan: string, contact: string, day: int, month: string, duration: int, campaign: int, pdays: int, previous: int, poutcome: string, y: string]\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "bankScala.show()",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_30105926",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "+---+-------------+-------+---------+-------+-------+-------+----+--------+---+-----+--------+--------+-----+--------+--------+---+\n|age|          job|marital|education|default|balance|housing|loan| contact|day|month|duration|campaign|pdays|previous|poutcome|  y|\n+---+-------------+-------+---------+-------+-------+-------+----+--------+---+-----+--------+--------+-----+--------+--------+---+\n| 30|   unemployed|married|  primary|     no|   1787|     no|  no|cellular| 19|  oct|      79|       1|   -1|       0| unknown| no|\n| 33|     services|married|secondary|     no|   4789|    yes| yes|cellular| 11|  may|     220|       1|  339|       4| failure| no|\n| 35|   management| single| tertiary|     no|   1350|    yes|  no|cellular| 16|  apr|     185|       1|  330|       1| failure| no|\n| 30|   management|married| tertiary|     no|   1476|    yes| yes| unknown|  3|  jun|     199|       4|   -1|       0| unknown| no|\n| 59|  blue-collar|married|secondary|     no|      0|    yes|  no| unknown|  5|  may|     226|       1|   -1|       0| unknown| no|\n| 35|   management| single| tertiary|     no|    747|     no|  no|cellular| 23|  feb|     141|       2|  176|       3| failure| no|\n| 36|self-employed|married| tertiary|     no|    307|    yes|  no|cellular| 14|  may|     341|       1|  330|       2|   other| no|\n| 39|   technician|married|secondary|     no|    147|    yes|  no|cellular|  6|  may|     151|       2|   -1|       0| unknown| no|\n| 41| entrepreneur|married| tertiary|     no|    221|    yes|  no| unknown| 14|  may|      57|       2|   -1|       0| unknown| no|\n| 43|     services|married|  primary|     no|    -88|    yes| yes|cellular| 17|  apr|     313|       1|  147|       2| failure| no|\n| 39|     services|married|secondary|     no|   9374|    yes|  no| unknown| 20|  may|     273|       1|   -1|       0| unknown| no|\n| 43|       admin.|married|secondary|     no|    264|    yes|  no|cellular| 17|  apr|     113|       2|   -1|       0| unknown| no|\n| 36|   technician|married| tertiary|     no|   1109|     no|  no|cellular| 13|  aug|     328|       2|   -1|       0| unknown| no|\n| 20|      student| single|secondary|     no|    502|     no|  no|cellular| 30|  apr|     261|       1|   -1|       0| unknown|yes|\n| 31|  blue-collar|married|secondary|     no|    360|    yes| yes|cellular| 29|  jan|      89|       1|  241|       1| failure| no|\n| 40|   management|married| tertiary|     no|    194|     no| yes|cellular| 29|  aug|     189|       2|   -1|       0| unknown| no|\n| 56|   technician|married|secondary|     no|   4073|     no|  no|cellular| 27|  aug|     239|       5|   -1|       0| unknown| no|\n| 37|       admin.| single| tertiary|     no|   2317|    yes|  no|cellular| 20|  apr|     114|       1|  152|       2| failure| no|\n| 25|  blue-collar| single|  primary|     no|   -221|    yes|  no| unknown| 23|  may|     250|       1|   -1|       0| unknown| no|\n| 31|     services|married|secondary|     no|    132|     no|  no|cellular|  7|  jul|     148|       1|  152|       1|   other| no|\n+---+-------------+-------+---------+-------+-------+-------+----+--------+---+-----+--------+--------+-----+--------+--------+---+\nonly showing top 20 rows\n\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "bankScala.printSchema()",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_23027580",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "root\n |-- age: integer (nullable \u003d true)\n |-- job: string (nullable \u003d true)\n |-- marital: string (nullable \u003d true)\n |-- education: string (nullable \u003d true)\n |-- default: string (nullable \u003d true)\n |-- balance: integer (nullable \u003d true)\n |-- housing: string (nullable \u003d true)\n |-- loan: string (nullable \u003d true)\n |-- contact: string (nullable \u003d true)\n |-- day: integer (nullable \u003d true)\n |-- month: string (nullable \u003d true)\n |-- duration: integer (nullable \u003d true)\n |-- campaign: integer (nullable \u003d true)\n |-- pdays: integer (nullable \u003d true)\n |-- previous: integer (nullable \u003d true)\n |-- poutcome: string (nullable \u003d true)\n |-- y: string (nullable \u003d true)\n\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "bankScala.describe().show()",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_7734308",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "+-------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+\n|summary|               age|           balance|               day|          duration|          campaign|             pdays|          previous|\n+-------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+\n|  count|              4521|              4521|              4521|              4521|              4521|              4521|              4521|\n|   mean| 41.17009511170095|1422.6578190665782|15.915284229152842|263.96129174961294| 2.793629727936297|39.766644547666445|0.5425790754257908|\n| stddev|10.575041217961267|2847.0887589185527| 8.246755126007518| 259.8278921907475|3.1094627120970313|100.11005093477695|1.6933750407187431|\n|    min|                19|             -3313|                 1|                 4|                 1|                -1|                 0|\n|    max|                87|             71188|                31|              3025|                50|               871|                25|\n+-------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+\n\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "bankScala.registerTempTable(\"bankScala\")",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_658179",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nselect age, count(1) value\nfrom bankScala\nwhere age \u003c 30 \ngroup by age \norder by age",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 4.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorMode": "ace/mode/sql",
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_22606330",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "age\tvalue\n19\t4\n20\t3\n21\t7\n22\t9\n23\t20\n24\t24\n25\t44\n26\t77\n27\t94\n28\t103\n29\t97\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nselect age, count(1) value \nfrom bankScala \nwhere age \u003c ${maxAge\u003d45} \ngroup by age \norder by age",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 4.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorMode": "ace/mode/sql",
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {
+          "maxAge": "45"
+        },
+        "forms": {
+          "maxAge": {
+            "name": "maxAge",
+            "defaultValue": "45",
+            "hidden": false
+          }
+        }
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_7757314",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "age\tvalue\n19\t4\n20\t3\n21\t7\n22\t9\n23\t20\n24\t24\n25\t44\n26\t77\n27\t94\n28\t103\n29\t97\n30\t150\n31\t199\n32\t224\n33\t186\n34\t231\n35\t180\n36\t188\n37\t161\n38\t159\n39\t130\n40\t142\n41\t135\n42\t141\n43\t115\n44\t105\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql \nselect age, count(1) value \nfrom bankScala\nwhere marital\u003d\"${marital\u003dsingle,single|divorced|married}\"\ngroup by age \norder by age",
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 4.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorMode": "ace/mode/sql",
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {
+          "marital": "single"
+        },
+        "forms": {
+          "marital": {
+            "name": "marital",
+            "defaultValue": "single",
+            "options": [
+              {
+                "value": "single"
+              },
+              {
+                "value": "divorced"
+              },
+              {
+                "value": "married"
+              }
+            ],
+            "hidden": false
+          }
+        }
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_18214966",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "age\tvalue\n19\t4\n20\t3\n21\t7\n22\t9\n23\t17\n24\t13\n25\t33\n26\t56\n27\t64\n28\t78\n29\t56\n30\t92\n31\t86\n32\t105\n33\t61\n34\t75\n35\t46\n36\t50\n37\t43\n38\t44\n39\t30\n40\t25\n41\t19\n42\t23\n43\t21\n44\t20\n45\t15\n46\t14\n47\t12\n48\t12\n49\t11\n50\t8\n51\t6\n52\t9\n53\t4\n55\t3\n56\t3\n57\t2\n58\t7\n59\t2\n60\t5\n66\t2\n69\t1\n"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "dateUpdated": "Jan 8, 2016 8:29:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "enabled": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1452241759022_179146957",
+      "id": "20160108-082919_21859759",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT"
+      },
+      "dateCreated": "Jan 8, 2016 8:29:19 AM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "ProjetBD",
+  "id": "2B9A95K2V",
+  "angularObjects": {
+    "2B8SPRQ2T": [],
+    "2BAS8F3N1": [],
+    "2B7E846ND": [],
+    "2BAHDSPQF": [],
+    "2B93SK9EQ": [],
+    "2B7RM6TP5": [],
+    "2B8RXHTM8": [],
+    "2BAN7GTSX": [],
+    "2B94S19BB": [],
+    "2B99VJMSF": [],
+    "2B9ARM7PU": [],
+    "2B8NMKDX4": [],
+    "2BAF123T5": [],
+    "2B8WBKG7W": []
+  },
+  "config": {
+    "looknfeel": "default"
+  },
+  "info": {}
+}
